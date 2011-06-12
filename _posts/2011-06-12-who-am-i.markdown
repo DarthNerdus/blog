@@ -1,0 +1,24 @@
+--- 
+layout: text
+title: Who Am I?
+tags: []
+
+date: 2011-06-12 12:49:11
+link: 
+---
+
+Representing oneself online can be problematic. In a forum where you are forced to be known by often vague, handles identifying yourself as a real person can be challenging. Do you use your real name or pseudonym? What if your name is taken? What if your second or even third choices are taken? What if a service wants to simply use your email address? Do you use a personal address or work address? Which are you better recognized by? In essence, how do you craft your digital persona?
+
+Lately, I've been struggling with this issue. I recently attempted to move away from my previous high school nickname (DarthNerdus). While it was a unique username, it was often looked upon as childish. Sure, I could use it anywhere. Yes, it was always available, and always me. When I tried using my real name though, that was no longer the case.
+
+Now obviously, I'm not the only Jesse Read in the world. There are a lot of people in the world, and a growing number use the internet. I'd be willing to bet that there are numerous other Jesse Reads here in New York area. So, naturally, I didn't find the availability of "jesseread" to be anywhere near ubiquitous. I even struggled to create a suitable email address. Nearly every combination of my name and initials were either too short or already claimed for Gmail (and I'm not about to go shopping for other free email providers)[^1]. In the end, I settled on "jessereadd" (Davis being my middle name, to explain the second d). Still, I was left wondering what if I had a more common name like Mike? I can only conclude that while using just your name is favorable, it's not always an option. So what are acceptable alternatives?
+
+An even bigger issue was my desire to have a single username. I would like to be known by the same name everywhere. When I go attempt to sign up for a service and my chosen name is already taken, it feels like digital identity theft. Even though there are probably hundreds of other people who share my name, and I'm probably not the first person to coin "Darth Nerdus", it's still horribly off-putting when you're told you already exist and are taken.
+
+I decided to switch anyways. I wrote up a [blog post](/2011/04/14/identity-crisis.html) about why and took the plunge. I changed my name on all the services I use, contacting the every-helpful support people where needed. At first, I was fine with it. Over time though, not so much. It really, *really* bugged me that I couldn't just use my name. To an admittedly unreasonable extent. That second d just clawed at my eyes every time I saw it. And not just that, but I started to think about how many people I admire are doing just fine using their not-quite-right names. Daniel Jalkut ([@danielpunkass](http://twitter.com/danielpunkass)), Dan Cederholm ([@simplebits](http://twitter.com/simplebits)), Mike Lee ([@bmf](http://twitter.com/bmf) – which I might add left me in a fit of laughter when I realized what it meant), and not to be forgotten Michael Lopp ([@rands](http://twitter.com/rands)/[Rands In Repose](http://randsinrepose.com/)). So why can't I? 
+
+Well, there's no reason I can't. I'm putting an end to this tomfoolery. I went ahead and nabbed the domain name, dropping the old one I'd grown tired of, and have begun switching everything back to the username I've had for years. Oh, and that little avatar I've grown so fond of over the past couple years.
+
+Already though, I've got a nagging feeling I'll change this all again in a few months.
+
+[^1]: I've already reserved darthnerdus@me.com for when iCloud is released, though!
