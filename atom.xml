@@ -4,24 +4,24 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>Jesse Read</title>
- <link href="http://dodgydev.net/atom.xml" rel="self"/>
- <link href="http://dodgydev.net/"/>
+ <link href="http://darthnerdus.net/atom.xml" rel="self"/>
+ <link href="http://darthnerdus.net/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://dodgydev.net/</id>
+ <id>http://darthnerdus.net/</id>
  <author>
    <name>Jesse Read</name>
-   <email>jessereadd@gmail.com</email>
+   <email>darthnerdus@gmail.com</email>
  </author>
  {% for post in site.posts limit:10 %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="{% if post.layout == 'link' %}{{ post.meta | xml_escape }}{% else %}http://dodgydev.net{{ post.url }}{% endif %}"/>
+   <link href="{% if post.layout == 'link' %}{{ post.meta | xml_escape }}{% else %}http://darthnerdus.net{{ post.url }}{% endif %}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://dodgydev.net{{ post.id }}</id>
+   <id>http://darthnerdus.net{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
    <author>
      <name>Jesse Read</name>
-     <uri>http://dodgydev.net/</uri>
+     <uri>http://darthnerdus.net/</uri>
    </author>
  </entry>
  {% endfor %}
