@@ -1,0 +1,299 @@
+body {
+/*background-color: #FFF;*/
+background-color: #fbfbf9;
+font-family: Lucida Grande, Arial, Helvetica, sans-serif;
+font-size: 11px;
+/*color: #333;*/
+color: #202020;
+margin: 10;
+
+}
+
+strong, em, b, i, bold {
+font-family: "Lucida Sans", "Lucida Grande", Arial, Helvetica, sans-serif;
+}
+
+a:link, a:visited {
+color: #666;
+text-decoration: underline;
+}
+
+a:hover, a:link:hover, a:visited:hover {
+color: #000;
+text-decoration: none;
+}
+
+a:link img, a:visited img {
+border: 0px;
+text-decoration: none;
+}
+
+#wrap {
+margin: 0 auto;
+text-align: left;
+padding-top: 20px;
+}
+
+div#container {
+padding: 10px;
+margin-bottom: 3em;
+width: 600px;
+margin-left: 300px;
+}
+
+#post {
+margin-bottom: 1.5em;
+border-bottom: 1px solid #eee;
+}
+
+li.archive {
+line-height:160%;
+}
+
+img.archive {
+vertical-align: bottom;
+}
+
+h2.entry-title {
+margin-left: 80px; 
+font-family: Arial;
+font-size: 20px;
+}
+
+div.entry-type {
+float: left;
+font-size: 12px;
+margin-right: 10px;
+width: 70px;
+}
+
+div.entry-content {
+margin-bottom: 1.5em;
+margin-left: 80px;
+}
+
+.link-title {
+font-size: 13px;
+font-weight: bold;
+}
+
+.cite {
+display: block;
+text-align: right;
+}
+
+div.quotation blockquote {
+font-family: Georgia, Times New Roman, serif;
+font-size: 13px;
+color: #555;
+}
+
+.chat ul {
+padding: 0px;
+margin:0px;
+}
+
+.chat ul li {
+list-style: none;
+font-size: 11px;
+color: #333;
+padding: 5px;
+margin: 0px;
+}
+
+.label {
+font-weight: bold;
+}
+
+li.odd {
+background-color: transparent;
+}
+
+li.even {
+background: #eee;
+}
+
+#pagenav {
+margin: 60px 0 0 0;
+padding-bottom: 1.5em;
+}
+
+#pagenav .inside {
+text-align: center;
+position: relative;
+}
+
+#back, #forward {
+font-family: Lucida Grande, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #666;
+text-transform: uppercase;
+padding: 7px;
+text-decoration: none;
+display: block;
+position: absolute;
+top: -7px;
+}
+
+#back:hover, #forward:hover {
+color: #000;
+}
+
+#back {
+float:left;
+text-align: left;
+left: 0px;
+}
+
+#forward {
+float: right;
+text-align: right;
+right: 0px;
+}
+
+#pages {
+color: #333;
+font-family: Lucida Grande, Arial, Helvetica, sans-serif;
+font-size: 11px;
+text-transform: uppercase;
+text-align: center;
+}
+
+.small {
+font-size: 10px;
+color: #999;
+}
+
+#left {
+width: 235px;
+padding: 10px;
+margin-left: 20px;
+position: fixed;
+line-height: 15px;
+}
+
+#left h1 {
+font-size: 18px;
+font-family: Calibri, Arial, Helvetica, sans-serif;
+color: #000;
+margin-bottom: 5px;
+width: 235px;
+line-height: 22px;
+}
+
+
+#left h1 a {
+color: #CCC;
+text-decoration: none;
+}
+
+#left h1 a:hover {
+color: #333;
+text-decoration: none;
+}
+
+#menu {
+font-size: 11px;
+margin-bottom: 10px;
+line-height: 20px;
+}
+
+#menu a {
+color: #666;
+text-decoration: none;
+}
+
+#menu a:hover {
+color: #000;
+border-bottom: 1px solid #eee;
+}
+
+#menu ul {
+padding-left: 0px;
+margin-left: 0px;
+}
+
+#menu li {
+display: inline;
+list-style: none;
+margin-right: 10px;
+}
+
+#menu li a {
+padding-bottom: 2px;
+}
+
+#description {
+border-top: 1px solid #eee;
+border-bottom: 1px solid #eee;
+color: #333;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: justify;
+}
+
+#description a {
+color: #666;
+text-decoration: none;
+}
+
+#description a:hover {
+color: #000;
+text-decoration: underline;
+}
+
+#blogroll {
+border-bottom: 1px solid #eee;
+color: #333;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: justify;
+}
+
+#blogroll a {
+color: #666;
+text-decoration: none;
+}
+
+#blogroll a:hover {
+color: #000;
+text-decoration: underline;
+}
+
+#search {
+border-bottom: 1px solid #eee;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: justify;
+}
+
+#credit {
+color: #CCC;
+font-size: 10px;
+padding-top: 10px;
+}
+
+#credit a:hover {
+color: #333;
+text-decoration: underline;
+}
+
+#credit a:hover.rubedo {
+color: #DD0000;
+text-decoration: none;
+}
+
+.tags {
+color: #999;
+font-size: 10px;
+padding: 6px 3px 0 0;
+}
+
+.tags a {
+padding: 1px 3px;
+margin: 0 0 3px 3px;
+}
+
+a.permalink {
+text-decoration:none;
+}
