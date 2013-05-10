@@ -2,12 +2,11 @@
 layout: default
 ---
 	<div id="post">
-	<h2 class="entry-title"><a href="http://www.youtube.com/watch?v={{ page.meta }}">{{ page.title }} (YouTube)</a></h2>
 	<div class="entry-type">
 	<a href="{{ page.url }}"><img src="/images/video.gif"></a>
 	</div>
 	<div class="entry-content">
-	<object width="500" height="305"><param name="movie" value="http://www.youtube.com/v/{{ page.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/{{ page.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="500" height="305" allowFullScreen="true" wmode="transparent"></embed></object>
+	<object><param name="movie" value="http://www.youtube.com/v/{{ page.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/{{ page.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="{{ page.width }}" height="{{ page.height }}" allowFullScreen="true" wmode="transparent"></embed></object>
 	{{ content }}
 	</div>
   	<p align="right" class="small">
