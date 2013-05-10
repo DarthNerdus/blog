@@ -17,7 +17,7 @@ layout: default
 	<a href="{{ post.url }}"><img src="/images/video.gif" alt="Video"></a>
 	</div>
 	<div class="entry-content">
-	<object width="500" height="305"><param name="movie" value="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="500" height="305" allowFullScreen="true" wmode="transparent"></embed></object>
+	<object><param name="movie" value="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="{{ post.width }}" height="{{ post.height }}" allowFullScreen="true" wmode="transparent"></embed></object>
 	{% else %}
 	<h2 class="entry-title">{{ post.title }}</h2>
 	<div class="entry-type">
