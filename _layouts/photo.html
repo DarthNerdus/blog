@@ -5,12 +5,8 @@ layout: default
 <div id="post">
 	<div class="entry-type"><a href="{{ page.url }}"><img src="/images/photo.gif" alt="Photograph"></a></div>
 	<div class="entry-content">
+	<p align=center><img src="/assets/{{ page.meta }}" style="max-width: 100%"></p>
 		{{content}}
-	<!-- {block:Caption}
-	{Caption}
-	{/block:Caption} -->
-	<!-- <br /><br />{block:RebloggedFrom}<span class="small">Reblogged from <a href="{ReblogParentURL}">{ReblogParentTitle}</a>.</span>{/block:RebloggedFrom} -->
-			<!-- {block:HasTags}<div class="tags">Tags: {block:Tags}<a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</div>{/block:HasTags} -->
 			</div>
 			<p align="right" class="small">
 		    	&mdash; <a class="permalink" href="{{ page.url }}">{{ page.date | date: "%B %d, %Y %l:%M%p" }}</a>
