@@ -12,6 +12,7 @@ layout: default
 	{% when 'photo' %}
 	<div class="entry-type"><a href="{{ post.url }}"><img src="/images/photo.gif" alt="Photograph"></a></div>
 	<div class="entry-content">
+	<p ><img src="/assets/{{ post.meta }}" style="max-width: 100%;"></p>
 	{% when 'youtube' %}
 	<div class="entry-type">
 	<a href="{{ post.url }}"><img src="/images/video.gif" alt="Video"></a>
