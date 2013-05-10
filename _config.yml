@@ -3,3 +3,5 @@ paginate: 10
 markdown: kramdown
 destination: public
 exclude: ["tumblr.html", "CNAME", "404_template.html", "public"]
+prose:
+siteurl: "http://darthnerdus.net"
