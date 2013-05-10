@@ -1,6 +1,5 @@
-auto: true
-server: false
 pygments: true
 paginate: 5
 markdown: kramdown
-exclude: tumblr.html convert.rb CNAME 404_template.html examples config.ru
+destination: public
+exclude: ["tumblr.html", "CNAME", "404_template.html", "public"]
