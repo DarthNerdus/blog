@@ -1,0 +1,32 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ site.name }}</title>
+		<description>{{ site.description }}</description>
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+		{% for post in site.posts limit:20 %}
+			<item>
+				<title>{{ post.title }}</title>
+				{% case post.layout %}
+				{% when 'photo' %}
+				<description>&lt;p &gt;&lt;img src=&quot;{{ site.url }}/assets/{{ post.meta }}&quot; style=&quot;max-width: 100%;&quot;&gt;&lt;/p&gt;
+				{{ post.content | xml_escape }}</description>
+				{% when 'youtube' %}
+				<description>&lt;object&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/{{ post.meta }}&amp;amp;rel=0&amp;amp;egm=0&amp;amp;showinfo=0&amp;amp;fs=1&quot;&gt;&lt;/param&gt;&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;&gt;&lt;/param&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;/param&gt;&lt;embed src=&quot;http://www.youtube.com/v/{{ post.meta }}&amp;amp;rel=0&amp;amp;egm=0&amp;amp;showinfo=0&amp;amp;fs=1&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;{{ post.width }}&quot; height=&quot;{{ post.height }}&quot; allowFullScreen=&quot;true&quot; wmode=&quot;transparent&quot;&gt;&lt;/embed&gt;&lt;/object&gt;
+				{{ post.content | xml_escape }}</description>
+				{% when 'quote' %}
+				<description>&#8220;{{ post.quote }}&quot; &#8212; {{ post.source }}&lt;/p&gt;</description>
+				{% else %}
+				<description>{{ post.content | xml_escape }}</description>
+				{% endcase %}
+				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+				<link>{% if post.layout == 'link' %}{{ post.meta | xml_escape }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</link>
+				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
