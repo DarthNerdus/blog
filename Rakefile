@@ -103,3 +103,13 @@ task :preview do
     system "jekyll -wd serve --config _config.yml,_config-dev.yml"
   end
 end
+
+# rake deploy
+desc "Deploy website to configured s3 bucket"
+task :deploy do
+  require 'jekyll-s3' 
+  require 'jekyll-s3'
+  is_headless = true
+  path = config["destination"] || "_site"
+  Jekyll::S3::CLI.new.run(path, is_headless)
+end
