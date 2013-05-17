@@ -1,7 +1,6 @@
 pygments: true
 paginate: 10
 markdown: kramdown
-destination: public
 name: "Jesse Read"
 description: "The musings of a rather nerdy Sith Lord"
 url: "http://darthnerdus.net"
