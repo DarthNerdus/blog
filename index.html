@@ -29,7 +29,7 @@ layout: default
 	</div>
 	<div class="entry-content">
 	{% endcase %}
-	{{ post.content }}
+	{{ post.content | rename_footnote_link: post.url }}
 	</div>
   	<p align="right" class="small">
     	&mdash; <a class="permalink" href="{{ post.url }}">{{ post.date | date: "%B %d, %Y %l:%M%p" }}</a>
