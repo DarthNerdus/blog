@@ -107,9 +107,17 @@ end
 # rake deploy
 desc "Deploy website to configured s3 bucket"
 task :deploy do
-  require 'jekyll-s3' 
-  require 'jekyll-s3'
-  is_headless = true
-  path = config["destination"] || "_site"
-  Jekyll::S3::CLI.new.run(path, is_headless)
+  puts "Building site"
+  system "jekyll build"
+  puts "\n--> Syncing media files..."
+  sh "s3cmd sync --acl-public --exclude '*.*' --include 'assets/*' --include 'images/*' --add-header=\"Expires: Sat, 20 Nov 2020 18:46:39 GMT\" --add-header=\"Cache-Control: max-age=6048000\"  _site/ s3://darthnerdus.net"
+
+  puts "\n--> Syncing Javascript and CSS assets next (Cache: expire in 1 week)..."
+  sh "s3cmd sync --acl-public --exclude '*.*' --include  '*.css' --include '*.js' --add-header=\"Cache-Control: max-age=604800\"  _site/ s3://darthnerdus.net"
+
+  puts "\n--> Sync html files and sitemap (Cache: 2 hours)..."
+  sh "s3cmd sync --acl-public --exclude '*.*' --include  '*.html' --include '*.xml' --add-header=\"Cache-Control: max-age=7200, must-revalidate\"  _site/ s3://darthnerdus.net"
+
+  puts "\n--> Syncing everything else"
+  sh "s3cmd sync --acl-public --exclude '.DS_Store' --delete-removed _site/ s3://darthnerdus.net"
 end
