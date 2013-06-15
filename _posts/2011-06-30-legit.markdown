@@ -1,6 +1,6 @@
 --- 
 layout: link
-title: "Legit \xE2\x80\x93 Sexy Git CLI, Inspired by GitHub for Mac"
+title: "Legit - Sexy Git CLI, Inspired by GitHub for Mac"
 tags: []
 
 meta: http://kennethreitz.com/legit-the-sexy-git-cli.html

@@ -1,6 +1,6 @@
 --- 
 layout: link
-title: "AppCode \xE2\x80\x93 the answer to my IDE woes."
+title: "AppCode - the answer to my IDE woes."
 tags: []
 
 meta: http://lapsusapp.co.uk/2011/04/15/appcode-the-answer-to-my-ide-woes/
