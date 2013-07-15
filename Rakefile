@@ -72,7 +72,7 @@ task :publish do
     if File.exists?("_posts/#{date}-#{filename}")
       raise "That post is already published."
     else
-      FileUtils.mv("_drafts/#{filename}", "_posts/#{date}-#{filename}") 
+      FileUtils.mv("_drafts/#{filename}", "_posts/#{date}-#{filename}")
       puts "#{filename} was moved to _posts."
 
       system "git stash"
@@ -110,14 +110,14 @@ task :deploy do
   puts "Building site"
   system "jekyll build"
   puts "\n--> Syncing media files..."
-  sh "s3cmd sync --acl-public --exclude '*.*' --include 'assets/*' --include 'images/*' --add-header=\"Expires: Sat, 20 Nov 2020 18:46:39 GMT\" --add-header=\"Cache-Control: max-age=6048000\"  _site/ s3://darthnerdus.net"
+  sh "s3cmd sync --acl-public --exclude '*.*' --include 'assets/*' --include 'images/*' --add-header=\"Expires: Sat, 20 Nov 2020 18:46:39 GMT\" --add-header=\"Cache-Control: max-age=6048000\"  _site/ s3://jesseread.net"
 
   puts "\n--> Syncing Javascript and CSS assets next (Cache: expire in 1 week)..."
-  sh "s3cmd sync --acl-public --exclude '*.*' --include  '*.css' --include '*.js' --add-header=\"Cache-Control: max-age=604800\"  _site/ s3://darthnerdus.net"
+  sh "s3cmd sync --acl-public --exclude '*.*' --include  '*.css' --include '*.js' --add-header=\"Cache-Control: max-age=604800\"  _site/ s3://jesseread.net"
 
   puts "\n--> Sync html files and sitemap (Cache: 2 hours)..."
-  sh "s3cmd sync --acl-public --exclude '*.*' --include  '*.html' --include '*.xml' --add-header=\"Cache-Control: max-age=7200, must-revalidate\"  _site/ s3://darthnerdus.net"
+  sh "s3cmd sync --acl-public --exclude '*.*' --include  '*.html' --include '*.xml' --add-header=\"Cache-Control: max-age=7200, must-revalidate\"  _site/ s3://jesseread.net"
 
   puts "\n--> Syncing everything else"
-  sh "s3cmd sync --acl-public --exclude '.DS_Store' --delete-removed _site/ s3://darthnerdus.net"
+  sh "s3cmd sync --acl-public --exclude '.DS_Store' --delete-removed _site/ s3://jesseread.net"
 end

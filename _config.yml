@@ -3,7 +3,7 @@ paginate: 10
 markdown: kramdown
 name: "Jesse Read"
 description: "The musings of a rather nerdy Sith Lord"
-url: "http://darthnerdus.net"
+url: "http://jesseread.net"
 exclude: ["tumblr.html", "CNAME", "404_template.html", "public", "Rakefile"]
 post:
   template: text.md
