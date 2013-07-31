@@ -29,12 +29,14 @@ text-decoration: none;
 }
 
 #wrap {
-margin: 0 auto;
+width: 900px;
+/*margin: 0 auto;*/
 text-align: left;
 padding-top: 20px;
 }
 
 div#container {
+position: absolute;
 padding: 10px;
 margin-bottom: 3em;
 width: 600px;
@@ -55,7 +57,7 @@ vertical-align: bottom;
 }
 
 h2.entry-title {
-margin-left: 80px; 
+margin-left: 80px;
 font-family: Arial;
 font-size: 20px;
 }
@@ -168,7 +170,7 @@ color: #999;
 width: 235px;
 padding: 10px;
 margin-left: 20px;
-position: fixed;
+position: absolute;
 line-height: 15px;
 }
 
