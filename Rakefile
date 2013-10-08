@@ -19,8 +19,8 @@ task :draft do
     template  = "_templates/#{ENV["template"]}.md"
   end
   meta      = ENV["meta"] || nil
-  extension = config["post"]["extension"]
-  editor    = config["editor"]
+  extension = config["post"]["extension"] || nil
+  editor    = config["editor"] || nil
 
   if title.nil? or title.empty?
     raise "Please add a title to your post."
