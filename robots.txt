@@ -1,1 +1,3 @@
-Sitemap: http://jesseread.net/sitemap.xmlx
+Sitemap: http://jesseread.net/sitemap.xml
+User-agent: *
+Disallow:
