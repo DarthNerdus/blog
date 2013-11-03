@@ -2,22 +2,19 @@
 layout: default
 ---
 	<div id="post">
-	<!-- <h2 class="entry-title"><a href="{{ page.link }}">{{ page.title }}</a></h2> -->
-	<div class="entry-type"><a href="{{ page.url }}"><img src="/images/link.gif" alt="Link"></a></div>
+	<div class="entry-type"><a href="{{ page.url }}"><i class="icon icon-long-arrow-right" style="text-decoration: none; font-size: 1.4em; line-height: 35.2px;"></i></a></div>
 	<div class="entry-content">
-	<p><a href="{{ page.meta }}" class="link-title">{{ page.title }}</a></p>	
+	<div class="contentpost"><div class="contentpost__linkline"><a href="{{ page.meta }}">{{ page.title }}</a></div>
 	{{ content }}
 	</div>
-  	<p align="right" class="small">
-    	&mdash; <a class="permalink" href="{{ page.url }}">{{ page.date | date: "%B %d, %Y %l:%M%p" }}</a>
-  	</p>
+	</div>
 	</div>
 	<div id="pagenav">
 	<div class="inside">
 		{% if page.next %}
 		<a id="forward" href="{{ page.next.url }}" title="View {{ page.next.title }}">Anterograde&nbsp;&rarr;</a>
 		{% endif %}
-		<span id="pages">~</span>
+		<span id="pages"><a class="permalink" href="/archive.html">{{ page.date | date: "%B %d, %Y" }}</a></span>
 		{% if page.previous %}
 		<a id="back" href="{{ page.previous.url }}" title="View {{ page.previous.title }}">&larr;&nbsp;Retrograde</a>
 		{% endif %}

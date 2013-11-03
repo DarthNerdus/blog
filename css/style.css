@@ -120,7 +120,7 @@ background: #eee;
 }
 
 #pagenav {
-margin: 60px 0 0 0;
+/*margin: 60px 0 0 0;*/
 padding-bottom: 1.5em;
 }
 
@@ -130,15 +130,17 @@ position: relative;
 }
 
 #back, #forward {
-font-family: Lucida Grande, Arial, Helvetica, sans-serif;
-font-size: 11px;
-color: #666;
 text-transform: uppercase;
 padding: 7px;
 text-decoration: none;
 display: block;
 position: absolute;
 top: -7px;
+line-height: 24px;
+font-size: 12px;
+color: #999999;
+text-align: center;
+font-family: 'Lato', sans-serif;
 }
 
 #back:hover, #forward:hover {
@@ -159,7 +161,7 @@ right: 0px;
 
 #pages {
 color: #333;
-font-family: Lucida Grande, Arial, Helvetica, sans-serif;
+font-family: 'Lato', sans-serif;
 font-size: 11px;
 text-transform: uppercase;
 text-align: center;

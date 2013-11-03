@@ -1,5 +1,5 @@
 pygments: true
-paginate: 10
+paginate: 5
 markdown: kramdown
 name: "Jesse Read"
 description: "The musings of a rather nerdy Sith Lord"

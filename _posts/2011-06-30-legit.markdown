@@ -1,11 +1,12 @@
---- 
+---
 layout: link
 title: "Legit - Sexy Git CLI, Inspired by GitHub for Mac"
 tags: []
 
 meta: http://kennethreitz.com/legit-the-sexy-git-cli.html
 date: 2011-06-30 04:44:15
-link: 
+link:
+published: false
 ---
 
 Kenneth Reitz:

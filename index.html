@@ -5,10 +5,9 @@ layout: default
 	<div id="post">
 	{% case post.layout %}
 	{% when 'link' %}
-	<!-- <h2 class="entry-title"><a href="{{ post.link }}">{{ post.title }}</a></h2> -->
-	<div class="entry-type"><a href="{{ post.url }}"><img src="/images/link.gif" alt="Link"></a></div>
+	<div class="entry-type"><a href="{{ post.url }}"><i class="icon icon-long-arrow-right" style="text-decoration: none; font-size: 1.4em; line-height: 35.2px;"></i></a></div>
 	<div class="entry-content">
-	<p><a href="{{ post.meta }}" class="link-title">{{ post.title }}</a></p>	
+	<div class="contentpost"><div class="contentpost__linkline"><a href="{{ post.meta }}">{{ post.title }}</a></div></div>
 	{% when 'photo' %}
 	<div class="entry-type"><a href="{{ post.url }}"><img src="/images/photo.gif" alt="Photograph"></a></div>
 	<div class="entry-content">
@@ -18,34 +17,27 @@ layout: default
 	<div class="entry-content">
 	<object><param name="movie" value="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="{{ post.width }}" height="{{ post.height }}" allowFullScreen="true" wmode="transparent"></embed></object>
 	{% when 'quote' %}
-	<div class="entry-type"><a href="{{ post.url }}"><img src="/images/quote.gif" alt="Quotation"></a></div>
-	<div class="entry-content">
-	<blockquote style="font-family: Georgia, Times New Roman, serif; font-size: 15px; color: #555;">“{{ post.quote }}”</blockquote>
-	<p class="cite">— {{ post.source }}</p>
+	<div class="entry-content"><div class="contentpost"><div class="contentpost__articlecontent post-content">
+	<blockquote>“{{ post.quote }}”</blockquote>
+	<p class="cite">— {{ post.source }}</p></div></div>
 	{% else %}
-	<h2 class="entry-title">{{ post.title }}</h2>
-	<div class="entry-type">
-	<a href="{{ post.url }}"><img src="/images/{{ post.layout }}.gif" alt="Post"></a>
-	</div>
+	<div class="contentpost"><div class="contentpost__listline"><a href="{{ post.url }}">{{ post.title }}</a></div></div>
 	<div class="entry-content">
 	{% endcase %}
 	{{ post.content | rename_footnote_link: post.url }}
 	</div>
-  	<p align="right" class="small">
-    	&mdash; <a class="permalink" href="{{ post.url }}">{{ post.date | date: "%B %d, %Y %l:%M%p" }}</a>
-  	</p>
 	</div>
 {% endfor %}
 	<div id="pagenav">
 		<div class="inside">
-			{% if paginator.previous_page == 1 %} 
+			{% if paginator.previous_page == 1 %}
 			<a id="forward" href="/">Anterograde&nbsp;&rarr;</a>
 			{% elsif paginator.previous_page %}
 			<a id="forward" href="/page{{ paginator.previous_page }}">Anterograde&nbsp;&rarr;</a>
-			{% endif %} 
-			 <span id="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+			{% endif %}
+			 <span id="pages"><a class="permalink" href="/archive.html">Page {{ paginator.page }} of {{ paginator.total_pages }}</a></span>
 			{% if paginator.next_page %}
 			<a id="back" href="/page{{ paginator.next_page }}" >&larr;&nbsp;Retrograde</a>
 			{% endif %}
-		</div> 
+		</div>
 	</div>

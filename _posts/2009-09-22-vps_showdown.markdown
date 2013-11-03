@@ -10,7 +10,7 @@ A while back on the [macsb][macsb] mailing list there was some discussion about 
 
 In essence, the difference between these two companies is their *feel*.
 
-**If you like to tinker, Linode gives you everything you need.  
+**If you like to tinker, Linode gives you everything you need.
 If you rather a defined, slick experience, Slicehost is for you.**
 
 ## Location
@@ -63,11 +63,11 @@ On the same track as distributions, I should point out that Linode offers both i
 
 ## Bandwidth, IP addresses, and High-Availability
 
-Bandwidth obviously varies by pricing plan, which will be looked at later. But generally speaking, when comparing Slicehost and Linode plans side-by-side, Linode offers more bandwidth of Slicehost at equivalent pricing tiers. 
+Bandwidth obviously varies by pricing plan, which will be looked at later. But generally speaking, when comparing Slicehost and Linode plans side-by-side, Linode offers more bandwidth of Slicehost at equivalent pricing tiers.
 
 Both Linode and Slicehost give 1 dedicated IP address for each VPS, with more purchasable. (You must provide proper justification when applicable.)
 
-Both parties offer private IP addresses for unmetered bandwidth (in the same data-center). Linode offers this immediately upon setting up your Node, Slicehost will accommodate you receiving a support request. 
+Both parties offer private IP addresses for unmetered bandwidth (in the same data-center). Linode offers this immediately upon setting up your Node, Slicehost will accommodate you receiving a support request.
 
 Both companies offer in-depth guides to achieving high-availability / IP-failover.
 
@@ -107,7 +107,7 @@ Both companies offer recovery consoles to allow you to control the server direct
 
 For some people, it really comes down to this... a pricing comparison. I should point out that Linode has many more pricing tiers, but Slicehost has larger options.
 
-| Price (Mo) | RAM | Disk Space | Bandwidth
+VPS | Price (Mo) | RAM | Disk Space | Bandwidth
 -|:-:|:-:|:-:|:-:
 Linode 360 | $19.95 | 360MB | 16GB | 200GB
 256 Slice | $20.00 | 256MB | 10GB | 100GB
@@ -137,9 +137,7 @@ Linode is more tight-knit in my experience. They have an IRC channel hosted on O
 
 ## In Summary
 
-It all comes back to the feel. Linode can offer you more if you like to pull the levers and push the buttons, but Slicehost will offer you a more controlled experience, which is quite enjoyable. In the end, I'd say it's mostly a matter of preference. 
-
-*Published your opinion? Found a mistake? Feel free to email me at <darthnerdus@gmail.com>.*
+It all comes back to the feel. Linode can offer you more if you like to pull the levers and push the buttons, but Slicehost will offer you a more controlled experience, which is quite enjoyable. In the end, I'd say it's mostly a matter of preference.
 
 [macsb]: http://tech.dir.groups.yahoo.com/group/macsb/message/14097
 [linode]: http://www.linode.com/?r=298003406fff3692808e3e90f40f71256b02eb49
