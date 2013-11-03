@@ -119,5 +119,5 @@ task :deploy do
   sh "s3cmd sync --acl-public --exclude '*.*' --include  '*.html' --include '*.xml' --add-header=\"Cache-Control: max-age=7200, must-revalidate\"  _site/ s3://jesseread.net"
 
   puts "\n--> Syncing everything else"
-  sh "s3cmd sync --acl-public --exclude '.DS_Store' --delete-removed _site/ s3://jesseread.net"
+  sh "s3cmd sync --acl-public --exclude '.DS_Store' _site/ s3://jesseread.net"
 end
