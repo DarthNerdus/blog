@@ -1,10 +1,11 @@
 pygments: true
+destination: public
 paginate: 5
 markdown: kramdown
 name: "Jesse Read"
 description: "The musings of a rather nerdy Sith Lord"
 url: "http://jesseread.net"
-exclude: ["tumblr.html", "CNAME", "404_template.html", "public", "Rakefile"]
+exclude: ["tumblr.html", "CNAME", "404_template.html", "public", "Rakefile", "_site"]
 post:
   template: text.md
   extension: md
