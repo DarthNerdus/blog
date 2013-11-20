@@ -49,8 +49,8 @@ end
 
 # rake publish post="testing"
 desc "Move a post from _drafts to _posts"
-task :publish do
-  post      = ENV["post"] || nil
+task :publish, :post do |t, args|
+  post      = args[:post] || nil
   extension = config["post"]["extension"]
   filename = "#{post}.#{extension}"
 
