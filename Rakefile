@@ -89,7 +89,7 @@ end
 desc "Launch a preview of the site in the browser [drafts (true/false)]"
 task :preview do
   require 'Launchy'
-  drafts = ENV["drafts"] || "true"
+  drafts = ENV["drafts"] || "false"
 
   Thread.new do
     puts "Launching browser for preview..."
