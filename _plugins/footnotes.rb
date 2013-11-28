@@ -3,10 +3,11 @@ module FootnoteLiquidFilters
 	#     Note, this is a hackish workaround (not foolproof if the same random
 	#     happens to be generated twice)
 	def rename_footnote_link(input, date)
-		# random = rand(100)
-		input.gsub(/fn:\d+/, '\0-'+"#{date}").gsub(/fnref:\d+/, '\0-'+"#{date}")
+		random = rand(1000000)
+		# input.gsub(/fn:\d+/, '\0-'+"#{date}").gsub(/fnref:\d+/, '\0-'+"#{date}")
+		input.gsub(/fn:\d+/, '\0-'+random.to_s).gsub(/fnref:\d+/, '\0-'+random.to_s)
 	end
-	
+
 	# Removes footnote links entirely
 	def remove_footnote_link(input)
 		input.gsub(/<a .+ rel\=\"footnote\">(\d+)<\/a>/, '\1').gsub(/<a .+ rel\=\"reference\">.+<\/a>/, '')
