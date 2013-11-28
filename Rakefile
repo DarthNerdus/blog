@@ -106,7 +106,7 @@ end
 
 # rake deploy
 desc "Deploy website to configured s3 bucket"
-task :deploy do
+task :deploy_s3 do
   puts "Building site"
   system "jekyll build"
   puts "\n--> Syncing media files..."
@@ -120,4 +120,12 @@ task :deploy do
 
   puts "\n--> Syncing everything else"
   sh "s3cmd sync --acl-public --exclude '.DS_Store' public/ s3://jesseread.net"
+end
+
+desc "Deploy website to digital-ocean"
+task :deploy do
+  puts "Building site"
+  system "jekyll build"
+  puts "Syncing site to server"
+  sh "rsync -avvzP public/ do-ic-1:/var/www/blog"
 end
