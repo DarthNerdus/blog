@@ -13,7 +13,7 @@ body {
 }
 
 strong, em, b, i, bold {
-font-family: "Lucida Sans", "Lucida Grande", Arial, Helvetica, sans-serif;
+//font-family: "Lucida Sans", "Lucida Grande", Arial, Helvetica, sans-serif;
 }
 
 a:link, a:visited {
@@ -52,12 +52,21 @@ margin-bottom: 1.5em;
 border-bottom: 1px solid #eee;
 }
 
+#post hr {
+border:0;
+height: 1px;
+color: #eee;
+background-color: #eee;
+}
+
 li.archive {
 line-height:160%;
 }
 
 img.archive {
 vertical-align: bottom;
+max-width:20px;
+max-height:20px;
 }
 
 h2.entry-title {
@@ -71,6 +80,11 @@ float: left;
 font-size: 12px;
 margin-right: 10px;
 width: 70px;
+margin-top: 7px;
+}
+
+.entry-type img {
+vertical-align:bottom;
 }
 
 div.entry-content {
