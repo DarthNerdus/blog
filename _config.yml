@@ -1,4 +1,4 @@
-pygments: true
+highlighter: pygments
 destination: public
 paginate: 5
 markdown: kramdown
@@ -9,4 +9,4 @@ exclude: ["tumblr.html", "CNAME", "404_template.html", "public", "Rakefile", "_s
 post:
   template: text.md
   extension: md
-editor: subl
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-less]

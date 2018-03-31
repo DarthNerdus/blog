@@ -88,19 +88,17 @@ end
 # rake preview
 desc "Launch a preview of the site in the browser [drafts (true/false)]"
 task :preview do
-  require 'Launchy'
   drafts = ENV["drafts"] || "false"
 
   Thread.new do
-    puts "Launching browser for preview..."
+    puts "Launching server..."
     sleep 2
-    Launchy.open("http://localhost:4000")
   end
 
   if drafts == "false"
-    system "jekyll -w serve --config _config.yml,_config-dev.yml"
+    system "jekyll serve -w -H invok.de --config _config.yml,_config-dev.yml"
   else
-    system "jekyll -wd serve --config _config.yml,_config-dev.yml"
+    system "jekyll serve --future -w -D -H invok.de --config _config.yml,_config-dev.yml"
   end
 end
 
@@ -127,5 +125,5 @@ task :deploy do
   puts "Building site"
   system "jekyll build"
   puts "Syncing site to server"
-  sh "rsync -avvzP public/ do-ic-1:/var/www/blog"
+  sh "rsync -avvzP public/ /var/www/blog"
 end
