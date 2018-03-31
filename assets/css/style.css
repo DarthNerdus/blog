@@ -310,6 +310,12 @@ text-decoration:none;
     display:none;
 }
 
+span.wrapper {
+    display: block;
+    float: left;
+    margin-right: 0.4em;
+} 
+
 @media screen and (max-device-width : 320px) {
     #wrap {
         position:relative;
@@ -352,3 +358,5 @@ text-decoration:none;
         text-align: center;
     }
 }
+
+
