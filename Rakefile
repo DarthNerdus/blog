@@ -49,8 +49,8 @@ end
 
 # rake publish post="testing"
 desc "Move a post from _drafts to _posts"
-task :publish, :post do |t, args|
-  post      = args[:post] || nil
+task :publish do
+  post      = ENV["post"] || nil
   extension = config["post"]["extension"]
   filename = "#{post}.#{extension}"
 
@@ -64,7 +64,7 @@ task :publish, :post do |t, args|
     time     = Time.now.strftime("%Y-%m-%d %X %z")
 
     content = File.read("_drafts/#{filename}")
-    parsed_content = "#{content.sub("date: 2016-01-01", "date: #{time}")}"
+    parsed_content = "#{content.sub("date: 2100-01-01", "date: #{time}")}"
     open("_drafts/#{filename}", 'w') do |draft|
       draft.puts parsed_content
     end
