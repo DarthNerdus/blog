@@ -328,6 +328,7 @@ span.wrapper {
     display: block;
     float: left;
     margin-right: 0.4em;
+    margin-bottom: 0;
 } 
 
 @media screen and (max-device-width : 320px) {

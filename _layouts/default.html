@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,12 +27,13 @@
 <body class="home-template">
 <header class="sidebar" id="site-head" style="background-image: url(/assets/jr_back.jpg)">
     <div id="site-head-content" class="sidebar__inner">
-            <a id="blog-logo" class="sidebar__logo" href="/">
-                <img src="/assets/jr.png" class="sidebar__logo__image" alt="Blog Logo" />
-            </a>
+            {% if page.url != '/' %}<a id="blog-logo" class="sidebar__logo" href="/">
+                <img src="/assets/link.gif" class="sidebar__logo__image" alt="Blog Logo" />
+            </a>{% endif %}
         <section class="sidebar__information">
-            <h1 class="sidebar__information__title">jesse read <a style="text-decoration: none; color:#AAA" href="https://twitter.com/darthnerdus">@darthnerdus</a></h1>
-            <h2 class="sidebar__information__description"><span class="wrapper">the musing of a rather</span><span class="wrapper">nerdy sith lord</span></h2>
+            <h1 class="sidebar__information__title">jesse read <a href="https://twitter.com/darthnerdus">@darthnerdus</a></h1>
+            <div class="sidebar__information__description__container"><h2 class="sidebar__information__description"><span class="wrapper">the musing of a rather</span><span class="wrapper">nerdy sith lord</span></h2></div>
+            <div class="sidebar__information__footer"><a href="/archive">the archive</a><br /><a href="/books">the book reviews</a></div>
         </section>
 
     </div>

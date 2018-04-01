@@ -51,6 +51,17 @@ body {
 		position: absolute;
 		bottom: 0;
 		padding: 50px 10% 10%;
+		a {
+			text-decoration: none;
+			color: @color-link-sidebar;
+			&:hover {
+				color: @color-link-hover;
+			}
+		}
+		.sidebar__information__description__container {
+			margin-bottom: @rs * 3;
+			display: block;
+		}
 		.sidebar__information__title {
 			font-size: @rs*2;
 			margin: 0;
@@ -67,14 +78,9 @@ body {
 			font-weight: normal;
 		}
 		.sidebar__information__footer {
+                        float: left;
+			margin-top: @rs;
 			padding: @rs/2 0;
-			a {
-				text-decoration: none;
-				color: @color-main;
-				&:hover {
-					color: @color-main-light;
-				}
-			}
 		}
 	}
 }

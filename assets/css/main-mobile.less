@@ -51,7 +51,18 @@ body {
 		width: 100%;
 		max-width: 810px;
 		box-sizing: border-box;
-		padding: @rs @rs @rs @rs*4.5;
+		padding: @rs @rs @rs @rs;
+		a {
+			text-decoration: none;
+			color: @color-link-sidebar;
+			&:hover {
+				color: @color-link-hover;
+			}
+		}
+		.sidebar__information__description__container {
+			margin-bottom: @rs * 3;
+			display: block;
+		}
 		.sidebar__information__title {
 			font-size: @rs;
 			margin: 0;
@@ -69,13 +80,7 @@ body {
 		}
 		.sidebar__information__footer {
 			padding: 0 0;
-			a {
-				text-decoration: none;
-				color: @color-main;
-				&:hover {
-					color: @color-main-light;
-				}
-			}
+			font-size: @rs/4*3;
 		}
 	}
 }
