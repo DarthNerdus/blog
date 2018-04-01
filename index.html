@@ -5,28 +5,28 @@ layout: default
 	<div id="post">
 	{% case post.layout %}
 	{% when 'link' %}
-	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/images/{{ post.layout }}.gif" /></a></div>
+	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/assets/images/{{ post.layout }}.svg" /></a></div>
 	<div class="entry-content">
 	<div class="contentpost"><div class="contentpost__linkline"><a href="{{ post.meta }}">{{ post.title }}</a></div></div>
 	{% when 'book' %}
-	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/images/{{ post.layout }}.gif" /></a></div>
+	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/assets/images/{{ post.layout }}.svg" /></a></div>
 	<div class="entry-content">
 	<div class="contentpost"><div class="contentpost__linkline"><a href="{{ post.meta }}">{{ post.title }}</a></div></div>
 	{% when 'photo' %}
-	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/images/{{ post.layout }}.gif" /></a></div>
+	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/assets/images/{{ post.layout }}.svg" /></a></div>
 	<div class="entry-content">
 	<p ><img src="/assets/{{ post.meta }}" style="max-width: 100%;"></p>
 	{% when 'youtube' %}
-	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/images/{{ post.layout }}.gif" /></a></div>
+	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/assets/images/{{ post.layout }}.svg" /></a></div>
 	<div class="entry-content">
 	<object><param name="movie" value="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/{{ post.meta }}&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="{{ post.width }}" height="{{ post.height }}" allowFullScreen="true" wmode="transparent"></embed></object>
 	{% when 'quote' %}
-	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/images/{{ post.layout }}.gif" /></a></div>
+	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/assets/images/{{ post.layout }}.svg" /></a></div>
 	<div class="entry-content"><div class="contentpost"><div class="contentpost__articlecontent post-content">
 	<blockquote>“{{ post.quote }}”</blockquote>
 	<p class="cite">— {{ post.source }}</p></div></div>
 	{% else %}
-	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/images/{{ post.layout }}.gif" /></a></div>
+	<div class="entry-type"><a href="{{ post.url }}"><img class="archive" src="/assets/images/{{ post.layout }}.svg" /></a></div>
 	<div class="contentpost"><div class="contentpost__listline"><a href="{{ post.url }}">{{ post.title }}</a></div></div>
 	<div class="entry-content">
 	{% endcase %}
