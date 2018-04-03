@@ -1,7 +1,7 @@
 --- 
 layout: book
 title: "Review: The Ripper's Shadow"
-date: 2018-03-31
+date: "2018-03-31 00:00:00 -0400"
 meta: "https://amzn.to/2GXWFg3"
 categories: books
 ---
