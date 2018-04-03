@@ -3,6 +3,7 @@ layout: book
 title: 
 meta: 
 date: 2100-01-01
+categories: books
 ---
 <!-- Meta is simply the desired link of the title -->
 <!-- CMD+SHIFT+OPT+D for date in Sublime Text (insertDate plugin) -->
