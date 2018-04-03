@@ -3,6 +3,7 @@ layout: book
 title: "Review: The Sherlockian" 
 meta: "https://amzn.to/2GsPFa0"
 date: 2018-04-03 00:18:37 -0400
+categories: books
 ---
 <!-- Meta is simply the desired link of the title -->
 <!-- CMD+SHIFT+OPT+D for date in Sublime Text (insertDate plugin) -->
