@@ -16,8 +16,7 @@ layout: null
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 1000px)" href="/assets/css/main-mobile.css" />
-    <link rel="stylesheet" type="text/css" media="only screen and (min-width: 1001px)" href="/assets/css/main-desktop.css" />
+    <link rel="stylesheet" type="text/css" media="only screen" href="/assets/css/main.css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
@@ -25,14 +24,14 @@ layout: null
     <link rel="alternate" type="application/rss+xml" title="Jesse Read - jesseread.net" href="/feed.xml" />
 </head>
 <body class="home-template">
-<header class="sidebar" id="site-head" style="background-image: url(/assets/jr_back.jpg)">
+<header class="sidebar" id="site-head">
     <div id="site-head-content" class="sidebar__inner">
             {% if page.url != '/' %}<a id="blog-logo" class="sidebar__logo" href="/">
                 <img src="/assets/link.gif" class="sidebar__logo__image" alt="Blog Logo" />
             </a>{% endif %}
         <section class="sidebar__information">
             <h1 class="sidebar__information__title">jesse read <a href="https://twitter.com/darthnerdus">@darthnerdus</a></h1>
-            <div class="sidebar__information__description__container"><h2 class="sidebar__information__description"><span class="wrapper">the musing of a rather</span><span class="wrapper">nerdy sith lord</span></h2></div>
+	    <h2 class="sidebar__information__description">the musing of a rather nerdy sith lord</h2>
             <div class="sidebar__information__footer"><a href="/archive.html">the archive</a><br /><a href="/books.html">the book reviews</a></div>
         </section>
 

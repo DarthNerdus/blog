@@ -329,12 +329,13 @@ text-decoration:none;
     display:none;
 }
 
-span.wrapper {
-    display: block;
-    float: left;
-    margin-right: 0.4em;
-    margin-bottom: 0;
-} 
+@media screen and (max-device-width: 767px) {
+div.entry-content {
+	margin-bottom: 1.5em;
+	margin-left: 0;
+}       
+
+}
 
 @media screen and (max-device-width : 320px) {
     #wrap {
