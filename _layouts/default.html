@@ -26,9 +26,6 @@ layout: null
 <body class="home-template">
 <header class="sidebar" id="site-head">
     <div id="site-head-content" class="sidebar__inner">
-            {% if page.url != '/' %}<a id="blog-logo" class="sidebar__logo" href="/">
-                <img src="/assets/link.gif" class="sidebar__logo__image" alt="Blog Logo" />
-            </a>{% endif %}
         <section class="sidebar__information">
             <h1 class="sidebar__information__title">jesse read <a href="https://twitter.com/darthnerdus">@darthnerdus</a></h1>
 	    <h2 class="sidebar__information__description">the musing of a rather nerdy sith lord</h2>
@@ -42,7 +39,7 @@ layout: null
     {{ content }}
 
         <footer class="footer site-footer">
-            <a class="subscribe icons-feed" href="http://jesseread.net/feed.xml"><span class="tooltip">Subscribe!</span></a>
+		<a class="subscribe icons-feed" href="http://jesseread.net/feed.xml"></a>
             <div class="inner">
                  <section class="copyright">&copy; 2018 Jesse Read</section>
             </div>
