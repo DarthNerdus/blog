@@ -31,6 +31,11 @@ border: 0px;
 text-decoration: none;
 }
 
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+	color: #111 !important;
+	text-decoration: #111 !important;
+}
+
 #wrap {
 width: 900px;
 /*margin: 0 auto;*/
