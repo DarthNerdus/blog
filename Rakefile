@@ -85,6 +85,18 @@ task :publish do
   end
 end
 
+# rake server_push
+desc "Publish files into the local server directory /var/www/public"
+task :server_push do
+  puts "Building site"
+  system "jekyll build"
+  system "/bin/rm -r /var/www/public_old"
+  system "mv /var/www/public /var/www/public_old"
+  system "mv public /var/www/"
+  puts "Put public folder at /var/www/public"
+end
+  
+
 # rake preview
 desc "Launch a preview of the site in the browser [drafts (true/false)]"
 task :preview do
@@ -96,9 +108,9 @@ task :preview do
   end
 
   if drafts == "false"
-    system "jekyll serve -w -H invok.de --config _config.yml,_config-dev.yml"
+    system "jekyll serve -w -H jesseread.net -P 8888 --config _config.yml,_config-dev.yml"
   else
-    system "jekyll serve --future -w -D -H invok.de --config _config.yml,_config-dev.yml"
+    system "jekyll serve --future -w -D -H jesseread.net -P 8888 --config _config.yml,_config-dev.yml"
   end
 end
 
