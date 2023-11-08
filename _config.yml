@@ -4,9 +4,11 @@ paginate: 5
 markdown: kramdown
 name: "Jesse Read"
 description: "The musings of a rather nerdy Sith Lord"
-url: "http://jesseread.net"
-exclude: ["tumblr.html", "CNAME", "404_template.html", "public", "Rakefile", "_site"]
+url: "https://jesseread.net"
+exclude: ["CNAME", "404_template.html", "public", "Rakefile", "_site", "_unpublished", "Gemfile", "Gemfile.lock"]
 post:
   template: text.md
   extension: md
-plugins: [jekyll-paginate, jekyll-sitemap, jekyll-less]
+feed:
+  posts_limit: 20
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-loading-lazy, jekyll-feed]

@@ -22,13 +22,13 @@ layout: null
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
-    <link rel="alternate" type="application/rss+xml" title="Jesse Read - jesseread.net" href="/feed.xml" />
+    {% feed_meta %}
 </head>
 <body class="home-template">
 <header class="sidebar" id="site-head">
     <div id="site-head-content" class="sidebar__inner">
         <section class="sidebar__information">
-		<h1 class="sidebar__information__title"><a class="link-unstyled" href="/">jesse read</a> <a href="https://twitter.com/darthnerdus">@darthnerdus</a></h1>
+		<h1 class="sidebar__information__title"><a class="link-unstyled" href="/">jesse read</a> <a href="/">@darthnerdus</a></h1>
 	    <h2 class="sidebar__information__description">the musing of a rather nerdy sith lord</h2>
             <div class="sidebar__information__footer"><a href="/archive.html">the archive</a><br /><a href="/books.html">the book reviews</a></div>
         </section>
@@ -40,9 +40,9 @@ layout: null
     {{ content }}
 
         <footer class="footer site-footer">
-		<a class="subscribe icons-feed" href="http://jesseread.net/feed.xml"></a>
+		<a class="subscribe icons-feed" href="{{ site.url }}{{ site.baseurl }}/feed.xml"></a>
             <div class="inner">
-                 <section class="copyright">&copy; 2018 Jesse Read</section>
+		    <section class="copyright">&copy; {{ site.time | date: '%Y' }} Jesse Read</section>
             </div>
         </footer>
     </section>
