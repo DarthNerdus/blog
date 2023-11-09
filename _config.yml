@@ -5,8 +5,7 @@ markdown: kramdown
 title: "Jesse Read"
 name: "Jesse Read"
 description: "The musings of a rather nerdy Sith Lord"
-url: "https://darthnerdus.github.io"
-baseurl: "/blog"
+url: "https://jesseread.net"
 exclude: ["CNAME", "404_template.html", "public", "Rakefile", "_site", "_unpublished", "Gemfile", "Gemfile.lock"]
 post:
   template: text.md
