@@ -89,7 +89,7 @@ end
 desc "Publish files into the local server directory /var/www/public"
 task :server_push do
   puts "Building site"
-  system "jekyll build"
+  system "jekyll build --config _config.yml,_config-server.yml"
   system "/bin/rm -r /var/www/public_old"
   system "mv /var/www/public /var/www/public_old"
   system "mv public /var/www/"
