@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Jesse Read</title>
+    <meta name="description" content="" />
+    <meta content="The musings of a rather nerdy sith lord." name="description" />
+    <meta content="Jesse Read" name="title" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="google-site-verification" content="FZUHNO8oymKMA55ICUX5ceoBKdPu905KlHa1m1uFCyA" />
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="only screen" href="/assets/css/main.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link type="application/atom+xml" rel="alternate" href="http://jesseread.net:8888/feed.xml" title="Jesse Read" />
+</head>
+<body class="home-template">
+<header class="sidebar" id="site-head">
+    <div id="site-head-content" class="sidebar__inner">
+        <section class="sidebar__information">
+		<h1 class="sidebar__information__title"><a class="link-unstyled" href="/">jesse read</a> <a href="/">@darthnerdus</a></h1>
+	    <h2 class="sidebar__information__description">the musing of a rather nerdy sith lord</h2>
+            <div class="sidebar__information__footer"><a href="/archive.html">the archive</a><br /><a href="/books.html">the book reviews</a></div>
+        </section>
+
+    </div>
+</header>
+<main class="contentlist" role="main">
+    <section class="contentlist__inner">
+    	<div id="post">
+	<div class="contentpost"><div class="contentpost__headline">Is This Thing On?</a></div>
+	<div class="entry-content"><div class="contentpost__articlecontent post-content">
+	<p>It’s been a while. A very, very long while. So much for “writing regularly” like I told myself I would. But lo and behold, we are putting that behind us! (Or so I am telling myself, again.) I’ve decided that I need an outlet boring my definitively non-technical friends with ramblings of how I did this or that at some ungodly hour of the morning. And so, here we are.</p>
+
+<h3 id="whats-changed">What’s changed?</h3>
+
+<p>Well, how I run the site has been completely overhauled. I fell in love with Tumblr, as seemingly everyone else did, but getting email notifications that the site is bouncing up and down like a ping-pong ball makes me wonder if the platform has any long-term viability. But that’s a topic for far more knowledgable beings to tackle. Me? I just switched to using <a href="http://jekyllrb.com/">Jekyll</a>.</p>
+
+<p>The initial issue when I considering switching to Jekyll is that I use <a href="http://www.red-sweater.com/marsedit/">MarsEdit</a> to write up most my content. I just like the feel of a desktop application. Since Jekyll posts are all just text files, I could just launch TextMate and go to town. That doesn’t really suit me though. MarsEdit has this lovely live-preview window that I’ve pretty much come to rely on when proof-reading on the go. At first, it seemed as though there was no possible way to hook MarsEdit into a file-based blogging system. After a helpful hint from Daniel Jalkut <a href="https://twitter.com/redsweater/status/49082879086567424">on Twitter</a> though, I realized there was indeed a file-based blogging option and I eventually came up with a way to use this feature and leverage the power of Jekyll.</p>
+
+<p>In short, all I did was customize Alex Payne’s <a href="https://gist.github.com/100171">newpost</a> script for my devious needs. What I ended up with was a new <a href="https://github.com/jessereadd/jessereadd.github.com/blob/master/convert.rb">conversion script</a> that takes my text file posts from MarsEdit and spits them back out in nice Jekyll posts with the appropriate YAML data.</p>
+
+<h3 id="the-longer-version">The longer version</h3>
+
+<p>In MarsEdit, you can create a <a href="http://www.blosxom.com/">Blosxom</a> blog. This tells MarsEdit to “post” your content to text files in a directory of your choosing and optionally execute a script when you publish a new post. So, I added a _blosxom folder to my Jekyll directory and execute the aforementioned conversion script when I write a new post. Walla! MarsEdit with Jekyll. But, I couldn’t stop there.</p>
+
+<p>I love the microblog layout of Tumblr. The idea of having smaller, better formatted posts for the type of content you want to share underscores the point of a blog. To share something. For many people though, that something isn’t always a wall of text. So, despite the fact that I only ever use the text and link options, I needed this.</p>
+
+<p>Jekyll has a wonderful template system utilizing Liquid. It renders your pages based on which layout you specify in the post metadata. So specifying a post as “link” layout allows you to specify a different template for that content. The hitch I ran into was with MarsEdit’s file format. The Blosxom functionality is very bare-bones, as it was intended to be. It simply puts the title of the post on the first line, and your content follows. Expanding the conversion script and changing how I title my posts was the solution.</p>
+
+<p>I now prefix all my post titles with the layout I want to use in MarsEdit. E.g. “Text: Is This Thing On?” and “Link: Amazing awesome link from twitter!” Any relevant URLs I simply include in a line at the top of the post before the actual content. When the script opens the files, it checks the post title to see if it is text or not and will additionally insert the relevant metadata and remove it from the post. Really simple, works well.</p>
+
+<h3 id="whats-so-special">What’s so special?</h3>
+
+<p>Nothing, really. I’m just smitten that I can still use MarsEdit and have my site look and feel very Tumblr-esque (in fact, I copied my Tumblr theme over almost identically) and have the power of Jekyll underneath. And of course, being a Jekyll blog I am hosting it via GitHub’s awesome <a href="http://pages.github.com/">Pages</a> feature.</p>
+
+<h3 id="shoutouts-and-thank-yous">Shoutouts and Thank Yous</h3>
+
+<p>Giving credit where credit is due, I want to tip my hat to the people’s work I built upon.</p>
+
+<ul>
+  <li><a href="http://jekyllrb.com/">Jekyll</a> is maintained by Tom Preston-Werner, Nick Quaranto, “and many awesome contributors!”</li>
+  <li><a href="http://al3x.net">Alex Payne</a>, for his <a href="https://gist.github.com/100171">newpost.rb</a> script that got me wondering and for having his own personal blog open to the public <a href="https://github.com/al3x/al3x.github.com">on GitHub</a>. Having a baseline to create my own was extremely helpful.</li>
+  <li>Daniel Jalkut (<a href="http://www.red-sweater.com/">Red Sweater Software</a>), for his <em>awesome</em> <a href="http://www.red-sweater.com/marsedit/">MarsEdit</a> application.</li>
+  <li>GitHub, for being… well, GitHub. I host this blog there via <a href="http://pages.github.com/">Pages</a> and, of course, host the <a href="https://github.com/jessereadd/jessereadd.github.com">repository</a> there as well. They are all amazing.</li>
+</ul>
+
+
+	</div></div></div></div>
+	</div>
+	<div id="pagenav">
+	<div class="inside">
+		
+		<a id="forward" href="/2011/03/30/compassion_from_a_game_publisher.html" title="View Compassion From a Game Publisher?">Anterograde&nbsp;&rarr;</a>
+		
+		<span id="pages"><a class="permalink" href="/archive.html">March 23, 2011</a></span>
+		
+		<a id="back" href="/2009/12/05/dns_speed.html" title="View DNS Speed">&larr;&nbsp;Retrograde</a>
+		
+	</div>
+	</div>
+
+
+        <footer class="footer site-footer">
+		<a class="subscribe icons-feed" href="http://jesseread.net:8888/feed.xml"></a>
+            <div class="inner">
+		    <section class="copyright">&copy; 2023 Jesse Read</section>
+            </div>
+        </footer>
+    </section>
+</main>
+<link rel="stylesheet" type="text/css" href="/assets/css/bigfoot-default.css" />
+<script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/js/bigfoot.min.js"></script>
+<script type="text/javascript">
+    $.bigfoot();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4879949-10', 'jesseread.net');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
