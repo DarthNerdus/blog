@@ -2,6 +2,7 @@ highlighter: pygments
 destination: public
 paginate: 5
 markdown: kramdown
+title: "Jesse Read"
 name: "Jesse Read"
 description: "The musings of a rather nerdy Sith Lord"
 url: "https://jesseread.net"
