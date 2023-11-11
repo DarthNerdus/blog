@@ -12,4 +12,4 @@ post:
   extension: md
 feed:
   posts_limit: 20
-plugins: [jekyll-paginate, jekyll-sitemap, jekyll-loading-lazy, jekyll-feed]
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-loading-lazy, jekyll-feed, jekyll/footnotes]
