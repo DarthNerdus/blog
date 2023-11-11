@@ -2,7 +2,9 @@
 layout: default
 ---
 	<div id="post">
-	<div class="contentpost"><div class="contentpost__headline">{{ page.title }}</a></div>
+	<div class="contentpost">
+		<div class="entry-type" style="padding-top: 24px;"><a href="{{ page.url }}"><img class="archive" src="/images/{{ page.layout }}.gif" /></i></a></div>
+		<div class="contentpost__headline">{{ page.title }}</a></div>
 	<div class="entry-content"><div class="contentpost__articlecontent post-content">
 	{{ content }}
 	</div></div></div></div>

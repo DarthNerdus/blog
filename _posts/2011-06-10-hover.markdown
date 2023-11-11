@@ -7,8 +7,12 @@ date: 2011-06-10 12:47:30
 link: 
 ---
 
-I didn't always hate GoDaddy, but it didn't take long. I think the second (of many, many, many) renewal notification emails was all it took. And, finally, the bulk of the domains I host there are coming up for renewal this month. I figured this would be a prime opportunity to transfer to the domains rather than renew them at GoDaddy. I did a little research, and based on a recommendation from [Marco Arment](http://www.marco.org/2011/04/14/why-is-it-so-hard-to-be-a-good-registrar) I decided to transfer to [Hover](http://hover.com/darthnerdus)[^1].
+I didn't always hate GoDaddy, but it didn't take long. I think the second (of many, many, many) renewal notification emails was all it took. And, finally, the bulk of the domains I host there are coming up for renewal this month. I figured this would be a prime opportunity to transfer to the domains rather than renew them at GoDaddy. I did a little research, and based on a recommendation from [Marco Arment](http://www.marco.org/2011/04/14/why-is-it-so-hard-to-be-a-good-registrar) I decided to transfer to [Hover](http://hover.com/darthnerdus){% fn %}
 
 Hover has extremely simple offerings, and an equally simple (but easy to use) control panel. They don't pass the All Under One Roof test (they don't offer SSL certificates, which isn't too big of a deal), but they do what they do well. I would definitely recommend them to anyone looking for a domain registrar.
 
-[^1]: Yes, this is an affiliate link.
+{% footnotes %}
+{% fnbody %}
+Yes, that is an affiliate link.
+{% endfnbody %}
+{% endfootnotes %}
